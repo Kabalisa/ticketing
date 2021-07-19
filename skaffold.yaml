@@ -41,6 +41,14 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    - image: fadees/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
     - image: fadees/payments
       context: payments
       docker:

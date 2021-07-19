@@ -2,13 +2,9 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 
-// declare global {
-//   namespace NodeJS {
-//     interface Global {
-//       signin(): string[];
-//     }
-//   }
-// }
+declare global {
+  var signin: (id?: string) => string[];
+}
 
 jest.mock("../nats-wrapper");
 
